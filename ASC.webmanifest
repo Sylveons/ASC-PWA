@@ -1,0 +1,18 @@
+
+{
+ "name": "After School Club PWA",
+ "short_name": "ASC",
+ "description": "this is painful",
+ "icons": [ {
+     "src": "icon.png",
+     "sizes": "100 x 100",
+     "type": "image/png"
+ }
+],
+"start_url": "index.html",
+"display": "fullscreen",
+"background_color": "#B12A34"
+
+
+
+}
