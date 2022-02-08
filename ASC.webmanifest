@@ -5,7 +5,7 @@
  "description": "this is painful",
  "icons": [ {
      "src": "icon.png",
-     "sizes": "100 x 100",
+     "sizes": "512x512",
      "type": "image/png"
  }
 ],
