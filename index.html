@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>After School Club</title>
+
+    <!-- scripts and imports -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="manifest" href="ASC.webmanifest" crossorigin="use-credentials">
+
+</head>
+
+<body>
+    <h1>After School Club</h1>
+
+    <div id="app">
+    <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{ lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+    <script>
+
+        let app = new Vue({
+
+            el: '#app',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Math",
+                    location: "London",
+                    price: 100,
+                    image: "math.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.lesson.availableInventory - 1;
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+
+
+        if('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js');
+};
+
+        
+    </script>
+
+</body>
+
+</html>
