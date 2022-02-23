@@ -4,10 +4,15 @@
  "short_name": "ASC",
  "description": "this is painful",
  "icons": [ {
-     "src": "icon.png",
+     "src": "math512.png",
      "sizes": "512x512",
      "type": "image/png"
- }
+ },
+ {
+    "src": "math192.png",
+    "sizes": "512x512",
+    "type": "image/png"
+}
 ],
 "start_url": "index.html",
 "display": "fullscreen",
