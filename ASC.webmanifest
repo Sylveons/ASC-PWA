@@ -2,7 +2,7 @@
 {
  "name": "After School Club PWA",
  "short_name": "ASC",
- "description": "this is painful",
+ "description": "After school club",
  "icons": [ {
      "src": "math512.png",
      "sizes": "512x512",
